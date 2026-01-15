@@ -1,0 +1,108 @@
+:root {
+  /* Colores */
+  --blue-gradient: linear-gradient(to bottom, #7755ff, #2f2ce9);
+  --circle-gradient: linear-gradient(to bottom, #4e21ca, rgba(36, 33, 239, 0));
+  --dark-navy: #303b59;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ecf2ff;
+}
+
+/* Contenedor Principal */
+.card {
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  overflow: hidden; /* Para que el panel azul respete el borde redondeado */
+}
+
+/* Panel Izquierdo */
+.result-panel {
+  background: var(--blue-gradient);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 50%;
+  border-radius: 30px; /* Redondeamos también el panel interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.result-panel h3 { opacity: 0.8; font-size: 1.2rem; }
+
+.score-circle {
+  background: var(--circle-gradient);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-big { font-size: 3.5rem; font-weight: 800; }
+.score-total { opacity: 0.5; font-size: 0.9rem; }
+
+.result-text p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  padding: 0 10px;
+}
+
+/* Panel Derecho */
+.summary-panel {
+  padding: 40px;
+  width: 50%;
+}
+
+.stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Colores de las filas del resumen */
+.reaction { background-color: #fff6f5; color: #ff5555; }
+.memory { background-color: #fffbf2; color: #ffb833; }
+.verbal { background-color: #f2fbfa; color: #00bb8f; }
+.visual { background-color: #f3f3fd; color: #1125d6; }
+
+.stat-score { color: var(--dark-navy); }
+.stat-score b { color: black; }
+
+/* Botón */
+.btn-continue {
+  background-color: var(--dark-navy);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-continue:hover {
+  background: var(--blue-gradient);
+}
